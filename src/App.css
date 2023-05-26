@@ -1,0 +1,519 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.SignUpTop {
+  display: flex;
+  gap: 0.7em;
+  flex-direction: column;
+}
+
+.SignUpContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.NavLink:focus {
+  color: #8187dc;
+}
+.UserContainer {
+  display: flex;
+}
+
+.EmailPassContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.SignUpInput {
+  margin-right: 2%;
+}
+
+.SignUpHeadline {
+  color: rgb(187, 185, 185);
+  font-family: "Dosis";
+  font-size: 1em;
+}
+
+.SignUpHeadline-black {
+  color: black;
+  font-family: "Dosis";
+  font-size: 1.5em;
+}
+
+.dot {
+  color: #8187dc;
+  font-size: 1.5em;
+}
+
+.center {
+  display: flex;
+  align-items: baseline;
+}
+
+.HomePageTop {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 2% 2% 2% 2%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.HomePageHeader,
+.SearchHeader {
+  font-family: "Dosis";
+}
+
+.HomePageHeader-purple {
+  color: #8187dc;
+  font-family: "Dosis";
+}
+
+.DogOnCouchPic {
+  margin-top: 4%;
+}
+
+.DogPic {
+  flex: 1;
+}
+
+.CatPic {
+  flex: 1;
+}
+
+.HomePageDetails {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  flex: 1;
+}
+
+.HomePageHeader-desc {
+  font-family: "Dosis";
+  font-size: 1.3em;
+  margin-top: 3%;
+}
+
+.HomePageHeader1 {
+  font-size: 4.5em;
+}
+
+.HomePageButtons {
+  margin-top: 3%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.nav-link {
+  text-decoration: none;
+}
+
+.AboutUsContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.AboutUsContent {
+  font-family: "Poppins";
+  margin: 1% 1%;
+  padding: 2% 2%;
+  text-align: center;
+  border-bottom: 2px solid #e9bc52;
+}
+
+.AboutUsHeader {
+  font-family: "Poppins";
+  margin: 0.7% 0%;
+}
+
+.AboutUsIcon {
+  color: #8187dc;
+}
+
+.AboutUsPage {
+  display: flex;
+  flex-direction: column;
+  margin: 3% 5% 0 5%;
+}
+
+.AboutUsTop {
+  text-align: center;
+  border-bottom: 2px solid #8187dc;
+}
+
+.AboutUsPage {
+  border: 3px solid #ada7ff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.AboutUsPicture {
+  display: flex;
+  justify-content: center;
+}
+
+.AboutUsPage:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2), 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.HomePageTop {
+  display: flex;
+}
+
+.HowItWorksContainer {
+  margin: 2% 2% 2% 2%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.HowItWorksPics {
+  width: 150px;
+  height: 150px;
+  align-self: center;
+}
+
+.HowItWorksContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.SearchFormContainer {
+  padding: 3%;
+  background-size: cover;
+}
+
+.SearchFormTop {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: white;
+  border: 3px solid #dab6fc;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2), 0 3px 6px rgba(0, 0, 0, 0.1);
+  padding: 3%;
+}
+
+.SearchHeader {
+  text-align: center;
+}
+
+.UserDetailsContainer {
+  border-radius: 25px;
+  padding: 2%;
+  margin-bottom: 2%;
+}
+
+.UserDetail {
+  font-family: "Poppins";
+}
+
+.UserTitle {
+  font-family: "Poppins";
+  font-size: 0.8em;
+  color: darkgrey;
+}
+
+.PetSearchPage {
+  margin: 2%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.ErrorMessage {
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+  padding: 0.75rem 1.25rem;
+  margin: 1rem 0rem;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  font-family: "Poppins";
+  text-align: center;
+}
+
+.Success {
+  color: #155724;
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+  padding: 0.75rem 1.25rem;
+  margin: 1rem 0rem;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  font-family: "Poppins";
+  text-align: center;
+}
+
+.ProfilePageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ProfilePageDetails {
+  background-color: #ada7ff;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2), 0 3px 6px rgba(0, 0, 0, 0.1);
+  margin: 4%;
+  flex-basis: 70%;
+  display: flex;
+}
+
+.ProfilePageDetails-Right {
+  flex: 1;
+}
+
+.ProfileCard {
+  background-color: white;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2), 0 3px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  border: none;
+  padding: 2%;
+  display: flex;
+  margin: 4%;
+  flex-direction: column;
+}
+
+.ProfileCard-header {
+  font-family: "Poppins";
+  text-align: center;
+}
+
+.ProfileForm {
+  margin-top: 2%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ProfileCardTop {
+  display: flex;
+  justify-content: center;
+  border-bottom: 2px solid #686868;
+  padding-bottom: 2%;
+}
+
+.ProfileManPic {
+  width: 150px;
+  height: 150px;
+  border-radius: 100px;
+}
+
+.ProfileForm-saveButton {
+  background-color: #e9bc52;
+  color: white;
+  font-size: 18px;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+  font-family: "Poppins";
+}
+
+.ProfileInput {
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.ProfileLabels {
+  font-family: "Poppins";
+}
+
+.MyPetsContent {
+  width: 100%;
+  height: 100%;
+}
+
+.PetLabels {
+  font-family: "Poppins";
+  color: darkgrey;
+  margin-right: 0.8em;
+}
+
+.ProfileLabels-res {
+  font-size: 1.2rem;
+  font-family: "Poppins";
+}
+.ProfileLabelsContainer {
+  display: flex;
+  align-items: center;
+}
+
+.PetLink {
+  text-decoration: none;
+  color: black;
+}
+
+.ProfileForm-changePass {
+  background-color: #ada7ff;
+  color: white;
+  font-size: 18px;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+  font-family: "Poppins";
+}
+
+.MyPetsContainer {
+  background-color: white;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2), 0 3px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  border: none;
+  padding: 2%;
+  margin: 4%;
+}
+
+.MyPetsTop {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 2%;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2), 0 2px 3px rgba(0, 0, 0, 0.1);
+}
+
+.MyPetsTitle {
+  text-align: center;
+  padding: 3% 0%;
+  font-family: "Poppins";
+  font-size: 2em;
+  transform: translateY(0px);
+  animation: float 6s ease-out;
+}
+
+.AdminPageContent-Right {
+  flex-basis: 100%;
+}
+
+.AdminPageContentContainer {
+  display: flex;
+  margin-top: 1%;
+}
+
+.NoPets {
+  text-align: center;
+  font-size: 1.3em;
+  font-family: "Poppins";
+}
+
+.user-list-title {
+  font-family: "Poppins";
+  text-align: center;
+}
+
+.UserListContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.UserDetailsContainer {
+  margin: 1%;
+}
+
+.FormContainer {
+  display: flex;
+  flex-direction: column;
+  width: 650px;
+}
+
+.AddPetForm {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Poppins";
+}
+
+.SearchInputsContainer {
+  display: flex;
+  justify-content: space-around;
+}
+
+.SearchInputsContainer > * {
+  flex: 1;
+}
+
+.SearchButtonContainer {
+  text-align: center;
+  margin-top: 1%;
+}
+
+.SinglePet {
+  width: 250px;
+}
+
+.SinglePetAdmin {
+  width: 50px;
+  height: 50px;
+}
+
+.SinglePetContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+@media (max-width: 1800px) {
+  .CloudImage1 {
+    display: none;
+  }
+}
+
+@media (max-width: 1215px) {
+  .CloudImage2 {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .FormContainer {
+    width: 250px;
+  }
+
+  .App {
+    display: flex;
+    flex-direction: column;
+  }
+  .HomePageHeader1,
+  .HomePageHeader-desc {
+    text-align: center;
+    margin-bottom: 2%;
+  }
+
+  .CatPic,
+  .DogPic {
+    width: 350px;
+  }
+  .AboutUsPicture {
+    flex-direction: column;
+  }
+  .SinglePetContainer {
+    flex-direction: column;
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
