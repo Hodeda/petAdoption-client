@@ -162,6 +162,7 @@ const PetDetailsPage = () => {
 
   return (
     <div>
+      {showError && <div className='ErrorMessage'>{error}</div>}
       {pet && (
         <Grid container justifyContent="center">
           <Grid item xs={12} sm={8} md={6}>
@@ -237,7 +238,6 @@ const PetDetailsPage = () => {
             </Button>
         )}
 </Box>}
-      {showError && <div className='ErrorMessage'>{error}</div>}
     </div>
   );
 };
