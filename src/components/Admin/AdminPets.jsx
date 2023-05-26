@@ -13,7 +13,7 @@ const AdminPets = () => {
         const fetchPets = async () => {
           try {
             setIsLoading(true)
-            const response = await axios.get("http://localhost:8080/pets");
+            const response = await axios.get(`${process.env.REACT_APP_SERVER}/pets`);
             setPetsArray(response.data);
             setIsLoading(false)
           } catch (error) {

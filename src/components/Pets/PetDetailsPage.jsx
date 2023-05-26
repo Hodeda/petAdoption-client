@@ -27,7 +27,7 @@ const PetDetailsPage = () => {
   useEffect(() => {
     const fetchPet = async () => {
       try {
-        const response = await axios.get(`http://localhost:8080/pets/${id}`);
+        const response = await axios.get(`${process.env.REACT_APP_SERVER}/pets/${id}`);
         setPet(response.data);
         setPetAdoptionStatus(response.data.adoptionStatus);
       } catch (error) {
@@ -76,7 +76,7 @@ const PetDetailsPage = () => {
     if(!res) return
     try {
         const updatedDetails = {petId:id, userId:userDetails._id, token}
-        await axios.put(`http://localhost:8080/pets/${id}/return`, updatedDetails)
+        await axios.put(`${process.env.REACT_APP_SERVER}/pets/${id}/return`, updatedDetails)
         setIsPetAdopted(false)
         setPetFostered(false)
         setPetAdoptionStatus('Available');
@@ -96,7 +96,7 @@ const PetDetailsPage = () => {
     const status = e.target.innerText.toLowerCase()
     try {
         const updatedDetails = {petId:id, userId:userDetails._id, token, status}
-        await axios.put(`http://localhost:8080/pets/${id}/adopt`, updatedDetails)
+        await axios.put(`${process.env.REACT_APP_SERVER}/pets/${id}/adopt`, updatedDetails)
         if(status === 'adopt') {
             setIsPetAdopted(true)
             setPetFostered(true)
@@ -121,7 +121,7 @@ const PetDetailsPage = () => {
     setPetSaved(true)
     try {
         const updatedDetails = {petId:id, userId: userDetails._id, token}
-        const response = await axios.put(`http://localhost:8080/pets/${id}/save`, updatedDetails)
+        const response = await axios.put(`${process.env.REACT_APP_SERVER}/pets/${id}/save`, updatedDetails)
         if(response.data.isSaved===true) {
             setPetSaved(true)
             updateUserDetails(response.data.updatedUser)
@@ -145,7 +145,7 @@ const PetDetailsPage = () => {
     setPetSaved(false)
     try {
         const updatedDetails = {petId:id, userId:userDetails._id, token}
-        const response = await axios.put(`http://localhost:8080/pets/${id}/unsave`, updatedDetails)
+        const response = await axios.put(`${process.env.REACT_APP_SERVER}/pets/${id}/unsave`, updatedDetails)
         if(response.data.isSaved===false) {
             setPetSaved(false)
             updateUserDetails(response.data.updatedUser)

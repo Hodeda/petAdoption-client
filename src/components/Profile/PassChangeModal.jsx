@@ -38,7 +38,7 @@ const PassChangeModal = ({ open, handleClose }) => {
             userId:userDetails._id
         }
         try {
-            const response = await axios.post('http://localhost:8080/users/passchange', passObj)
+            const response = await axios.post(`${process.env.REACT_APP_SERVER}/users/passchange`, passObj)
             setMessage(response.data.message)
             setTimeout(() => {
                 window.location.reload();

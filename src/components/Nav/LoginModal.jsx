@@ -14,7 +14,7 @@ const LoginModal = () => {
     const findUser = async (user) => {
         setErrorMessage('')
         try {
-            const res = await axios.post('http://localhost:8080/users/login',user)
+            const res = await axios.post(`${process.env.REACT_APP_SERVER}/users/login`,user)
             return res.data
         } catch (error) {
             console.error(error.message);

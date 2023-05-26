@@ -14,7 +14,7 @@ const SearchList = () => {
         }
         const fetchPets = async () => {
           try {
-            const response = await axios.get("http://localhost:8080/pets/advanced", {
+            const response = await axios.get(`${process.env.REACT_APP_SERVER}/pets/advanced`, {
               params: requestBody,
             });
             setPetsArray(response.data);

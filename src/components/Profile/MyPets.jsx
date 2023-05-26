@@ -26,9 +26,9 @@ const MyPets = ({fromAdmin,userId, userFirstName}) => {
               userIdentifier: `${userId}`
             }
           };
-          response = await axios.get(`http://localhost:8080/users/mypets`, config);
+          response = await axios.get(`${process.env.REACT_APP_SERVER}/users/mypets`, config);
         } else {
-          response = await axios.get(`http://localhost:8080/users/mypets`);
+          response = await axios.get(`${process.env.REACT_APP_SERVER}/users/mypets`);
         }
         setSavedPetsArray(response.data.savedPets);
         setPetsArray({

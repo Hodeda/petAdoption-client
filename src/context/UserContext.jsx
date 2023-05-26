@@ -27,7 +27,7 @@ export const UserContext = ({children}) => {
     }
     const fetchUser = async () => {
       try {
-        const response = await axios.get('http://localhost:8080/users/verify', {
+        const response = await axios.get(`${process.env.REACT_APP_SERVER}/users/verify`, {
           headers: {
             Authorization: `Bearer ${token}`
         }})

@@ -13,7 +13,7 @@ const PetEditForm = () => {
     useEffect(() => {
         const fetchPet = async () => {
           try {
-            const response = await axios.get(`http://localhost:8080/pets/${id}`);
+            const response = await axios.get(`${process.env.REACT_APP_SERVER}/pets/${id}`);
             setPet(response.data);
             setIsEditMode(true)
           } catch (error) {

@@ -14,7 +14,7 @@ useEffect(() => {
             headers: {
               Authorization: `Bearer ${token}`}};
     
-          const response = await axios.get('http://localhost:8080/users', config);
+          const response = await axios.get(`${process.env.REACT_APP_SERVER}/users`, config);
           setUsersArray(response.data)
         } catch (error) {
           console.log(error);

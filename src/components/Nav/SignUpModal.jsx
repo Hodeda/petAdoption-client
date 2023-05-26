@@ -19,7 +19,7 @@ const SignUpModal = () => {
 
     const postUser = async (newUser) => {
         try {
-            const response = await axios.post('http://localhost:8080/users/signup',newUser)
+            const response = await axios.post(`${process.env.REACT_APP_SERVER}/users/signup`,newUser)
             return response.data
         } catch (error) {
             console.error(error);

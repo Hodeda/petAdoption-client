@@ -64,7 +64,7 @@ const AddPetForm = ({editMode, pet}) => {
     try {
       setIsLoading(true)
       const formData = createFormData()
-      const response = await axios.post('http://localhost:8080/pets/addpet', formData)
+      const response = await axios.post(`${process.env.REACT_APP_SERVER}/pets/addpet`, formData)
       if (response.data.status) {
         setMessage(response.data.message)
         setIsLoading(false)
@@ -87,7 +87,7 @@ const AddPetForm = ({editMode, pet}) => {
     try {
       setIsLoading(true)
       const formData = createFormData()
-      const response = await axios.put('http://localhost:8080/pets/editpet', formData)
+      const response = await axios.put(`${process.env.REACT_APP_SERVER}/pets/editpet`, formData)
       console.log(response.data);
       if (response.data.status) {
         setMessage(response.data.message)

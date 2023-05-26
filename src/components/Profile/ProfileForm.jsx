@@ -39,7 +39,7 @@ const ProfileForm = () => {
         formValues,
         token
       }
-      const response = await axios.put('http://localhost:8080/users/update', content)
+      const response = await axios.put(`${process.env.REACT_APP_SERVER}/users/update`, content)
       setMessage(response.data.message);
       setFormValues({
         email: '',
